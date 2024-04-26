@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>welcome to estg.com</title>
+    <link rel="icon" href="photos/1.jpeg">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+         } 
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: url(photos/5);
+            background-size: cover;
+            background-position: center;
+          /*  animation: animate5 5s linear infinite;
+         }
+        @keyframes animate5{
+            100%{
+                filter: hue-rotate(360deg);
+            }
+            */
+        }  
+        .login-box{
+            position: relative;
+            backdrop-filter: blur(15px);
+            width: 400px;
+            height: 450px;
+            background: red;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgba(255, 255, 255, .5);
+            background: transparent;
+            backdrop-filter: blur(15px);
+            overflow: hidden;
+        }
+        /* fieldset::before{
+            content: "";
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 4px;
+            height: 4px;
+            background-color: #000;
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: animate 5s linear infinite;
+            
+        }
+        .login-box::after{
+            content: "";
+            position: absolute;
+            top: -67%;
+            left: -67%;
+            width: 20px;
+            height: 4px;
+            background: orangered;
+            z-index: 1;
+            transform-origin: bottom right;
+            
+
+        }
+        @keyframes animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            } 
+        }*/
+        
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            color: gray;
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 310px;
+            margin: 30px 0;
+            border-bottom: #fff 2px solid;
+        }
+        .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: gray;
+            pointer-events: none;
+            transition: .5s;
+            text-transform: capitalize;
+        }
+        .input-box input{
+            outline: none;
+            border: none;
+            background: transparent;
+            width: 100%;
+            height: 50px;
+            font-size: 1em;
+            color: #fff;
+            color: #fff;
+            padding: 0 35px 0 5px;
+        }
+        .input-box .icon{
+            position: absolute;
+            right: 8px;
+            color: #fff;
+            font-size: 1.2em;
+            line-height: 60px;
+        }
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -5px;
+        }
+        .remember-forgot{
+            margin: -15px 0 15px;
+            font-size: -9em;
+            color:  gray;
+            display: flex;
+            justify-content: space-between;
+        }
+        .remember-forgot label input{
+            margin-right: 3px;
+        }
+        .remember-forgot a{
+            color: gray;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .remember-forgot a:hover{
+            text-decoration: underline;
+        }
+        button:hover{
+            background: rgb(173, 173, 173);
+        }
+        .qv{
+            width: 8.5cm;
+            height: 40px;
+            background: gray;
+            border: none;
+            left: 1cm;
+            outline: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #000;
+            font-weight: 500;
+            color: #fff;
+            font-weight: bolder;
+            position: absolute;
+            bottom: 1.3cm;
+        }
+        .register-link{
+            font-size: -9em;
+            color:  gray;
+            text-align: center;
+            margin: 25px 0 10px;
+            position: absolute;
+            margin-top: 400px;
+        }
+        .register-link p .qa button{
+            color: gray;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+        }
+        .register-link p .qa button:hover{
+            text-decoration: underline;
+        }
+        @media (max-width: 360px){
+            .login-box{
+                width: 100%;
+                height: 100vh;
+                border: none;
+                border-radius: 0;
+            }
+            .input-box{
+                width: 290px;
+            }
+            .register-link p .qa button:hover{
+            text-decoration: underline;
+        }
+        button:hover{
+            background: rgb(173, 173, 173);
+        }
+        }
+        .qa:hover{
+            background: transparent;
+            outline: none;
+            text-decoration: underline;
+        }
+        .qa{
+            background: transparent;
+            color: gray;
+            text-decoration: none;
+            border:none;
+            outline:none;
+            font-size: 1em;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="login-box">
+        <form action="">
+            <h2>login</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        </form>
+       <a href="mi.HTML"><button class="qv">login</a> </button>
+        <div class="register-link">
+            <p>Don't have an account? <div><a href="SIGN UP.HTML"><button class="qa">sign up</button></a></div></p>
+        </div>
+    </div>
+</section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
